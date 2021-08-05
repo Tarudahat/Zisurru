@@ -78,7 +78,7 @@ func _process(_delta):
 							print("spell complete???")
 							if draw_order in spell_draw_orders:
 								print("valid spell!!!")
-		
+								print(json_data["spells"][spell_draw_orders.bsearch(draw_order)]["name"])
 		
 			prev_button = button
 
