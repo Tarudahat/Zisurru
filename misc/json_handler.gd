@@ -1,6 +1,6 @@
 extends Node
 
-var file_path="user://spells.json"
+var file_path="res://misc/spells.json"
 
 func serialize_vector(input_vector): 
     return {"x":input_vector.x,"y":input_vector.y}
