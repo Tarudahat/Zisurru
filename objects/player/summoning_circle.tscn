@@ -35,9 +35,9 @@ __meta__ = {
 }
 
 [node name="CheckBox2" type="CheckBox" parent="TextureRect"]
-margin_left = 175.0
+margin_left = 177.0
 margin_top = 101.0
-margin_right = 213.0
+margin_right = 215.0
 margin_bottom = 139.0
 custom_icons/checked = ExtResource( 2 )
 custom_icons/unchecked = ExtResource( 3 )
@@ -46,9 +46,9 @@ __meta__ = {
 }
 
 [node name="CheckBox3" type="CheckBox" parent="TextureRect"]
-margin_left = 387.0
+margin_left = 385.0
 margin_top = 101.0
-margin_right = 425.0
+margin_right = 423.0
 margin_bottom = 139.0
 custom_icons/checked = ExtResource( 2 )
 custom_icons/unchecked = ExtResource( 3 )
@@ -68,10 +68,10 @@ __meta__ = {
 }
 
 [node name="CheckBox5" type="CheckBox" parent="TextureRect"]
-margin_left = 489.056
-margin_top = 281.0
-margin_right = 527.056
-margin_bottom = 319.0
+margin_left = 489.0
+margin_top = 280.5
+margin_right = 527.0
+margin_bottom = 318.5
 custom_icons/checked = ExtResource( 2 )
 custom_icons/unchecked = ExtResource( 3 )
 __meta__ = {
@@ -102,9 +102,9 @@ __meta__ = {
 
 [node name="CheckBox8" type="CheckBox" parent="TextureRect"]
 margin_left = 73.0
-margin_top = 281.0
+margin_top = 280.5
 margin_right = 111.0
-margin_bottom = 319.0
+margin_bottom = 318.5
 custom_icons/checked = ExtResource( 2 )
 custom_icons/unchecked = ExtResource( 3 )
 __meta__ = {
@@ -124,9 +124,9 @@ __meta__ = {
 
 [node name="CheckBox10" type="CheckBox" parent="TextureRect"]
 margin_left = 281.0
-margin_top = 281.0
+margin_top = 280.5
 margin_right = 319.0
-margin_bottom = 319.0
+margin_bottom = 318.5
 custom_icons/checked = ExtResource( 2 )
 custom_icons/unchecked = ExtResource( 3 )
 __meta__ = {
@@ -145,10 +145,10 @@ __meta__ = {
 }
 
 [node name="CheckBox12" type="CheckBox" parent="TextureRect"]
-margin_left = 175.0
-margin_top = 461.0
-margin_right = 213.0
-margin_bottom = 499.0
+margin_left = 177.0
+margin_top = 460.0
+margin_right = 215.0
+margin_bottom = 498.0
 custom_icons/checked = ExtResource( 2 )
 custom_icons/unchecked = ExtResource( 3 )
 __meta__ = {
@@ -156,10 +156,10 @@ __meta__ = {
 }
 
 [node name="CheckBox13" type="CheckBox" parent="TextureRect"]
-margin_left = 387.0
-margin_top = 461.0
-margin_right = 425.0
-margin_bottom = 499.0
+margin_left = 385.0
+margin_top = 460.0
+margin_right = 423.0
+margin_bottom = 498.0
 custom_icons/checked = ExtResource( 2 )
 custom_icons/unchecked = ExtResource( 3 )
 __meta__ = {
