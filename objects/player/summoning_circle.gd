@@ -58,7 +58,7 @@ func _process(_delta):
 				if prev_button.rect_position!=button.rect_position:
 
 					var line = Line2D.new()
-					var line_points = PoolVector2Array([prev_button.rect_position+Vector2(231,18),button.rect_position+Vector2(231,18)])
+					var line_points = PoolVector2Array([prev_button.rect_position+Vector2(18,18),button.rect_position+Vector2(18,18)])
 					line.points = line_points
 					line.default_color = Color(drawing_color)
 					line.width = 4
@@ -105,6 +105,4 @@ func _process(_delta):
 			json_data["spells"].append(temp_json_spell)
 
 			JsonHandler.save_dictionary(json_data)
-			print(get_tree().change_scene("res://objects/player/summoning_circle.tscn"))
-		
-			
+			get_parent().reset_summoning_circle()
