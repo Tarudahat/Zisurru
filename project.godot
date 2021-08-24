@@ -8,22 +8,26 @@
 
 config_version=4
 
-_global_script_classes=[  ]
+_global_script_classes=[ {
+"base": "KinematicBody2D",
+"class": "HP_Object",
+"language": "GDScript",
+"path": "res://objects/HP_object.gd"
+} ]
 _global_script_class_icons={
-
+"HP_Object": ""
 }
 
 [application]
 
 config/name="Zisurru"
-run/main_scene="res://objects/player/summoning_circle.tscn"
+run/main_scene="res://levels/level_test.tscn"
 config/icon="res://icon.png"
 
 [autoload]
 
 JsonHandler="*res://misc/json_handler.gd"
 Globals="*res://misc/Globals.gd"
-GlobalCanvasLayer="*res://misc/CanvasLayer.tscn"
 
 [display]
 
