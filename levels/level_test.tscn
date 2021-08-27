@@ -84,3 +84,51 @@ position = Vector2( 160, 32 )
 
 [node name="Pumpkin_enemy" parent="objects" instance=ExtResource( 5 )]
 position = Vector2( 739, -72 )
+
+[node name="Pumpkin_enemy2" parent="objects" instance=ExtResource( 5 )]
+position = Vector2( 760, 152 )
+
+[node name="Pumpkin_enemy3" parent="objects" instance=ExtResource( 5 )]
+position = Vector2( 672, 256 )
+
+[node name="Pumpkin_enemy4" parent="objects" instance=ExtResource( 5 )]
+position = Vector2( 968, 176 )
+
+[node name="Pumpkin_enemy5" parent="objects" instance=ExtResource( 5 )]
+position = Vector2( 816, 376 )
+
+[node name="Pumpkin_enemy6" parent="objects" instance=ExtResource( 5 )]
+position = Vector2( 640, 512 )
+
+[node name="Pumpkin_enemy7" parent="objects" instance=ExtResource( 5 )]
+position = Vector2( 888, 488 )
+
+[node name="Pumpkin_enemy8" parent="objects" instance=ExtResource( 5 )]
+position = Vector2( 280, 600 )
+
+[node name="Pumpkin_enemy9" parent="objects" instance=ExtResource( 5 )]
+position = Vector2( 168, 408 )
+
+[node name="Pumpkin_enemy10" parent="objects" instance=ExtResource( 5 )]
+position = Vector2( 400, 392 )
+
+[node name="Pumpkin_enemy11" parent="objects" instance=ExtResource( 5 )]
+position = Vector2( -32, 608 )
+
+[node name="Pumpkin_enemy12" parent="objects" instance=ExtResource( 5 )]
+position = Vector2( -80, 214 )
+
+[node name="Pumpkin_enemy13" parent="objects" instance=ExtResource( 5 )]
+position = Vector2( 176, 240 )
+
+[node name="Pumpkin_enemy14" parent="objects" instance=ExtResource( 5 )]
+position = Vector2( 592, 720 )
+
+[node name="Pumpkin_enemy15" parent="objects" instance=ExtResource( 5 )]
+position = Vector2( 344, 768 )
+
+[node name="Pumpkin_enemy16" parent="objects" instance=ExtResource( 5 )]
+position = Vector2( 512, 214 )
+
+[node name="Pumpkin_enemy17" parent="objects" instance=ExtResource( 5 )]
+position = Vector2( -128, 56 )
