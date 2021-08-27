@@ -9,13 +9,14 @@ onready var hp_bar = player_ui.get_node("hp_bar")
 onready var animated_sprite = get_node("AnimatedSprite")
 
 func _ready():
+	Globals.player_refrence = self
 	player_ui.visible=true
 	hp_bar.max_value = hp
 
 func _process(_delta):
 	velocity = Vector2()
 
-	if Input.is_mouse_button_pressed(BUTTON_LEFT):
+	if Input.is_mouse_button_pressed(BUTTON_LEFT) and summoning_circle_popup.visible == false:
 		move_to_point = true
 		velocity =  get_local_mouse_position().normalized()*movement_speed
 		

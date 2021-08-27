@@ -17,6 +17,7 @@ var json_spell= {
 	"rank":"",
 	"cost":0,
 	"draw_order":[],
+	"node_path":"",
 }
 
 #needed for checking differences between the current item and the last one
@@ -37,7 +38,7 @@ func _ready():
 			temp_draw_order.append(JsonHandler.deserialize_vector(item))
 		spell_draw_orders.append(temp_draw_order)
 
-	print(spell_draw_orders)
+	#print(spell_draw_orders)
 
 
 func _process(_delta):
@@ -75,12 +76,23 @@ func _process(_delta):
 			
 					if pressed_order.size()>=2:
 						if (pressed_order[pressed_order.size()-1]==first_button):
-							print("spell complete???")
+							#print("spell complete???")
 							if draw_order in spell_draw_orders:
-								print("valid spell!!!")
+								#print("valid spell!!!")
 								for index in range(spell_draw_orders.size()):
 									if spell_draw_orders[index]==draw_order:
 										print(json_data["spells"][index]["name"])
+										Globals.player_refrence.hp -= json_data["spells"][index]["cost"]
+
+										var spell_node = load(json_data["spells"][index]["node_path"]).instance()
+										spell_node.position = Globals.player_refrence.position
+										var level_objects = Globals.player_refrence.get_parent()
+										level_objects.add_child(spell_node)
+
+										var summoning_popup = get_parent()
+										summoning_popup.reset_summoning_circle()
+										summoning_popup.visible = false
+
 		
 			prev_button = button
 
@@ -98,6 +110,7 @@ func _process(_delta):
 			temp_json_spell["name"] = $dev/dev_spell_name.text
 			temp_json_spell["cost"] = str2var($dev/dev_spell_cost.text)
 			temp_json_spell["rank"] = Globals.SPELL_CLASSES[$dev/dev_spell_class.selected]
+			temp_json_spell["path"] = $dev/dev_spell_path.text
 
 			for item in draw_order:
 				temp_json_spell["draw_order"].append(JsonHandler.serialize_vector(item))

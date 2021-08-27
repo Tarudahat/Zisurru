@@ -5,7 +5,7 @@
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 28.4116
-height = 9.00919
+height = 7.31171
 
 [node name="pong_enemy" type="KinematicBody2D"]
 script = ExtResource( 1 )

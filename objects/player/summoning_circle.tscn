@@ -14,7 +14,7 @@ script = ExtResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-drawing_color = Color( 0.733333, 1, 0, 1 )
+drawing_color = Color( 0, 0.717647, 1, 1 )
 
 [node name="TextureRect" type="TextureRect" parent="."]
 margin_right = 600.0
@@ -169,32 +169,43 @@ __meta__ = {
 
 [node name="dev" type="Control" parent="."]
 visible = false
-margin_right = 40.0
-margin_bottom = 40.0
+margin_left = 748.0
+margin_top = 8.0
+margin_right = 776.0
+margin_bottom = 24.0
 
 [node name="dev_spell_name" type="LineEdit" parent="dev"]
-margin_left = 24.0
-margin_top = 8.0
-margin_right = 216.0
-margin_bottom = 56.0
+margin_left = -196.0
+margin_top = 16.0
+margin_right = -4.0
+margin_bottom = 64.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="dev_spell_path" type="LineEdit" parent="dev"]
+margin_left = -196.0
+margin_top = 200.0
+margin_right = -4.0
+margin_bottom = 248.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="dev_spell_cost" type="LineEdit" parent="dev"]
-margin_left = 24.0
+margin_left = -196.0
 margin_top = 72.0
-margin_right = 128.0
+margin_right = -92.0
 margin_bottom = 120.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="dev_spell_class" type="OptionButton" parent="dev"]
-margin_left = 24.0
-margin_top = 139.0
-margin_right = 216.0
-margin_bottom = 187.0
+margin_left = -196.0
+margin_top = 136.0
+margin_right = -4.0
+margin_bottom = 184.0
 text = "BASIC"
 items = [ "BASIC", null, false, 0, null, "ADVANCED", null, false, 1, null, "CATASTROPHE", null, false, 2, null ]
 selected = 0
