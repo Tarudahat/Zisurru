@@ -31,6 +31,8 @@ func _ready():
 	var directory = Directory.new()
 	if directory.file_exists(JsonHandler.file_path):
 		json_data = JsonHandler.load_dictionary()
+	else:
+		print("JSON spells not found")
 
 	for spell in json_data["spells"]:
 		var temp_draw_order = PoolVector2Array()
