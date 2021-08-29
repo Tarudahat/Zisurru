@@ -4,6 +4,7 @@ extends KinematicBody2D
 export var hp:int = 100
 export var disappear_on_death:bool = true
 export var knock_back:bool = false
+export var immortal:bool = false
 
 var max_hp:int = hp
 
@@ -13,13 +14,13 @@ var knock_back_timer:int = 0
 
 func _process(_delta):
 	#cap hp
+	if immortal:
+		hp = max_hp
+
 	if hp > max_hp:
 		hp = max_hp
 	if hp <= 0:
 		hp=0
-	#knock-back stuff
-	if knock_back_timer >= OS.get_system_time_secs():
-		hp = prev_hp
 
 	if prev_hp > hp and knock_back:
 		print("got hit")
@@ -32,3 +33,10 @@ func _process(_delta):
 		queue_free()
 
 	prev_hp = hp
+
+
+
+func _physics_process(_delta):
+	#knock-back stuff
+	if knock_back_timer >= OS.get_system_time_secs():
+		hp = prev_hp
