@@ -6,6 +6,7 @@ export var dmg:int = 15
 var collision
 
 func _process(_delta):
+	collision = move_and_collide(Vector2(0,0))
 	
 	if collision != null:
 		

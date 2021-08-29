@@ -1,12 +1,13 @@
 extends HP_Object
 
-export var movement_speed:int = 250
+export var movement_speed:int = 225
 var velocity:Vector2 = Vector2()
 var move_to_point:bool = false
 onready var player_ui = get_node("player_ui/player_ui")
 onready var summoning_circle_popup = player_ui.get_node("summon_popup")
 onready var hp_bar = player_ui.get_node("hp_bar")
 onready var animated_sprite = get_node("AnimatedSprite")
+var collision
 
 func _ready():
 	Globals.player_refrence = self

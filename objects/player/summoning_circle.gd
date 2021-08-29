@@ -112,7 +112,7 @@ func _process(_delta):
 			temp_json_spell["name"] = $dev/dev_spell_name.text
 			temp_json_spell["cost"] = str2var($dev/dev_spell_cost.text)
 			temp_json_spell["rank"] = Globals.SPELL_CLASSES[$dev/dev_spell_class.selected]
-			temp_json_spell["path"] = $dev/dev_spell_path.text
+			temp_json_spell["node_path"] = $dev/dev_spell_path.text
 
 			for item in draw_order:
 				temp_json_spell["draw_order"].append(JsonHandler.serialize_vector(item))
