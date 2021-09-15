@@ -4,10 +4,14 @@ export var movement_speed:int = 225
 var velocity:Vector2 = Vector2()
 var move_to_point:bool = false
 onready var player_ui = get_node("player_ui/player_ui")
-onready var summoning_circle_popup = player_ui.get_node("summon_popup")
 onready var hp_bar = player_ui.get_node("hp_bar")
 onready var animated_sprite = get_node("AnimatedSprite")
 var collision
+var gem = {"gem_type":"","effect_path":"","amount":0,"color":0}
+var inventory = {"inventory":
+				[{"gems":[]}
+				,{"skins":[]}]}
+
 
 func _ready():
 	Globals.player_refrence = self
@@ -17,7 +21,7 @@ func _ready():
 func _process(_delta):
 	velocity = Vector2()
 
-	if Input.is_mouse_button_pressed(BUTTON_LEFT) and summoning_circle_popup.visible == false:
+	if Input.is_mouse_button_pressed(BUTTON_LEFT):
 		move_to_point = true
 		velocity =  get_local_mouse_position().normalized()*movement_speed
 		
@@ -25,15 +29,8 @@ func _process(_delta):
 			animated_sprite.flip_h=false
 		else:
 			animated_sprite.flip_h=true
-			
-	if Input.is_action_just_pressed("in_cast_spell"):
-		if summoning_circle_popup.visible:
-			summoning_circle_popup.visible=false
-		else: 
-			summoning_circle_popup.reset_summoning_circle()
-			summoning_circle_popup.popup()
 
 	velocity = move_and_slide(velocity)
-
+	
 	hp_bar.value = hp
 

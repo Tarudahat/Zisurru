@@ -3,8 +3,13 @@ extends Enemy_Object
 var can_dmg_player: bool = false
 var prev_sec = OS.get_system_time_secs()
 var grab_strength = 200
+var start_position
+
+func _ready():
+	start_position = position
 
 func _process(_delta):
+	position = start_position
 	if can_dmg_player:
 		Globals.player_refrence.move_and_slide((position-Globals.player_refrence.position).normalized()*grab_strength)
 		if prev_sec != OS.get_system_time_secs():

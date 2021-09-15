@@ -1,9 +1,7 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://objects/player/summoning_circle.tscn" type="PackedScene" id=2]
 [ext_resource path="res://assets/graphics/UI/hp_bar_empty.png" type="Texture" id=3]
 [ext_resource path="res://assets/graphics/UI/hp_bar_full.png" type="Texture" id=4]
-[ext_resource path="res://objects/player/summon_popup.gd" type="Script" id=5]
 
 [node name="player_ui" type="CanvasLayer"]
 
@@ -14,20 +12,6 @@ margin_bottom = 40.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
-
-[node name="summon_popup" type="Popup" parent="player_ui"]
-visible = true
-margin_left = 212.0
-margin_right = 816.0
-margin_bottom = 600.0
-script = ExtResource( 5 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="summoning_circle" parent="player_ui/summon_popup" instance=ExtResource( 2 )]
-margin_left = 0.0
-margin_right = -4.0
 
 [node name="hp_bar" type="TextureProgress" parent="player_ui"]
 margin_left = 8.0

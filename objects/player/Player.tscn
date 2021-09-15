@@ -42,6 +42,7 @@ animations = [ {
 } ]
 
 [node name="Player" type="KinematicBody2D"]
+collision_mask = 2147483651
 script = ExtResource( 1 )
 disappear_on_death = false
 knock_back = true
